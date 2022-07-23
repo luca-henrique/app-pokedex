@@ -5,7 +5,7 @@ import api from "../../../service/api";
 import { Container } from "./style";
 
 import CardPokemonItem from "../CardPokemonItem";
-
+import FadeAnimation from "../../atomic/FadeAnimation";
 type PokemonType = {
   type: { name: string };
 };
@@ -58,7 +58,9 @@ const Home = () => {
         data={data}
         keyExtractor={(pokemon) => pokemon.id.toString()}
         renderItem={({ item: pokemon }) => (
-          <CardPokemonItem pokemon={pokemon} key={pokemon.id} />
+          <FadeAnimation>
+            <CardPokemonItem pokemon={pokemon} />
+          </FadeAnimation>
         )}
       />
     </Container>
