@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Text } from "react-native";
+import { FlatList, Text } from "react-native";
 import api from "../../../service/api";
 
 import { Container } from "./style";
 
+import CardPokemonItem from "../CardPokemonItem";
+
 type PokemonType = {
-  type: string;
+  type: { name: string };
 };
 
 type Pokemon = {
@@ -52,9 +54,13 @@ const Home = () => {
 
   return (
     <Container>
-      {data.map((pokemon: Pokemon) => {
-        return <Text key={pokemon.id}>{pokemon.name}</Text>;
-      })}
+      <FlatList
+        data={data}
+        keyExtractor={(pokemon) => pokemon.id.toString()}
+        renderItem={({ item: pokemon }) => (
+          <CardPokemonItem pokemon={pokemon} />
+        )}
+      />
     </Container>
   );
 };
