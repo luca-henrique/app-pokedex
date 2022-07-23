@@ -58,7 +58,7 @@ const Home = () => {
         data={data}
         keyExtractor={(pokemon) => pokemon.id.toString()}
         renderItem={({ item: pokemon }) => (
-          <CardPokemonItem pokemon={pokemon} />
+          <CardPokemonItem pokemon={pokemon} key={pokemon.id} />
         )}
       />
     </Container>
