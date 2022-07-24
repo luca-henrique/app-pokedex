@@ -15,7 +15,7 @@ import Pokemon from "../../assets/animations/pokemon.json";
 
 import Button from "../../components/atomic/Button";
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   return (
     <Container>
       <Content>
@@ -34,7 +34,7 @@ const Welcome = () => {
         <SubTitle>Encontre todo os pokemons em um só lugar</SubTitle>
       </Content>
       <Footer>
-        <Button title="Entrar" />
+        <Button title="Entrar" onPress={() => navigation.navigate("Home")} />
       </Footer>
     </Container>
   );

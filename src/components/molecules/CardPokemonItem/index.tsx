@@ -27,6 +27,8 @@ type Pokemon = {
 import DotsImage from "../../../assets/images/dots.png";
 import PokeBall from "../../../assets/images/pokeballCard.png";
 
+import FadeAnimation from "../../atomic/FadeAnimation";
+
 import { TouchableOpacityProps } from "react-native";
 
 const CardPokemonItem = ({ pokemon, ...rest }: Pokemon) => {
@@ -50,11 +52,13 @@ const CardPokemonItem = ({ pokemon, ...rest }: Pokemon) => {
       </LeftSide>
       <RightSide>
         <PokemonBallDetail source={PokeBall} />
-        <PokemonImage
-          source={{
-            uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`,
-          }}
-        />
+        <FadeAnimation>
+          <PokemonImage
+            source={{
+              uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`,
+            }}
+          />
+        </FadeAnimation>
       </RightSide>
     </Container>
   );

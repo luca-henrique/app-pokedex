@@ -1,14 +1,16 @@
-import { View, Text } from "react-native";
 import { ThemeProvider } from "styled-components";
 import theme from "./src/global/styles/theme";
 
-import Welcome from "./src/screens/Welcome";
-import Home from "./src/screens/Home";
+import Routes from "./src/routes";
+
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Home />
-    </ThemeProvider>
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
+    </NavigationContainer>
   );
 }

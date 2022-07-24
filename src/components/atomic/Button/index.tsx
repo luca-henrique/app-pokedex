@@ -7,9 +7,9 @@ type ButtonProps = {
   title: string;
 } & TouchableOpacityProps;
 
-const Button = ({ title }: ButtonProps) => {
+const Button = ({ title, ...rest }: ButtonProps) => {
   return (
-    <Container>
+    <Container {...rest}>
       <Title>{title}</Title>
     </Container>
   );

@@ -25,7 +25,7 @@ export const WrapperAnimation = styled.View`
   ${({ theme }) => css`
     width: 200px;
     height: 300px;
-    background-color: ${theme.colors.types.water};
+    background-color: ${theme.colors.backgroundCard.water};
     border-radius: 100px;
     align-items: center;
     justify-content: center;

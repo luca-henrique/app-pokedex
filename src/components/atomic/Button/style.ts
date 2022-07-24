@@ -4,7 +4,7 @@ export const Container = styled.TouchableOpacity`
   ${({ theme }) => css`
     width: 100%;
     height: 50px;
-    background-color: ${theme.colors.types.water};
+    background-color: ${theme.colors.backgroundCard.water};
 
     justify-content: center;
     align-items: center;
