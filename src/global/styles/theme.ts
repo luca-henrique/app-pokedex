@@ -7,6 +7,8 @@ export default {
     textWhite: "#ffffff",
     lightText: "rgba(23, 23, 27, 0.6);",
 
+    detail: "#747476",
+
     backgroundCard: {
       grass: "#8BBE8A",
       fire: "#FFA756",

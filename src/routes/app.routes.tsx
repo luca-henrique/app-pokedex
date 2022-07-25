@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Welcome from "../screens/Welcome";
 import Home from "../screens/Home";
-import About from "../screens/About";
+import About from "../screens/PokemonDetail";
 
 const Stack = createNativeStackNavigator();
 
